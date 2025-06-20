@@ -15,7 +15,7 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running unit tests'
-                bat 'python -m unittest test_app.py'
+                sh 'python -m unittest test_app.py'
             }
         }
     }
@@ -28,7 +28,7 @@ pipeline {
                 body: """<p><b>Job:</b> ${env.JOB_NAME} #${env.BUILD_NUMBER}</p>
                          <p><b>Status:</b> FAILED</p>
                          <p><b>See console output at:</b> <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>""",
-                to: 'your-email@example.com'
+                to: 'rajeshjaga@gmail.com'
             )
         }
         success {

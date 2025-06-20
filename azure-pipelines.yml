@@ -11,9 +11,9 @@ steps:
       addToPath: true
 
   - script: |
-      python3 -m pip install --upgrade pip
+      python -m pip install --upgrade pip
     displayName: 'Install pip'
 
   - script: |
-      python3 -m unittest test_app.py
+      python -m unittest test_app.py
     displayName: 'Run Unittest Tests'
